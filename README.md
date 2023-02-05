@@ -1,6 +1,8 @@
 # Senshost-Infrastructure
 Infrastructure for hosting and release deployments
 
+
+
 ### Code tree
   - Prod  
     - Hosting
@@ -13,6 +15,7 @@ Infrastructure for hosting and release deployments
     - Deployment
 
 ### Deployment file templates
-Here is the yaml files
+Here are the K8S yaml files
 
 ### Github actions templates
+Here are the github actions yaml files
