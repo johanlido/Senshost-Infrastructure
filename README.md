@@ -42,8 +42,9 @@ Using the Gitlab flow strategy https://www.flagship.io/git-branching-strategies/
 ## Deployment agent
 ### Setting up k8deployment agent to run every 5 minutes
 On the control plane node, run: crontab -e \
-Insert the following line: \
-*/5 * * * * /home/ec2-user/k8script/script.sh deploytest &>> /home/ec2-user/k8script/log/logile.log
+Insert the following lines, as example for ams-senshost-api: \
+*/5 * * * * /home/ec2-user/k8script/k8deployagent.sh /home/ec2-user/k8script/ams-senshost-api.para ams-senshost-api-deploy &>> /home/ec2-user/k8script/log/logfile.log \
+*/5 * * * * /home/ec2-user/k8script/recyclelog.sh /home/ec2-user/k8script/log/logfile.log
 
 ### Deployment notification
 Every deployment must have a webhook in AMS Discord, so that everyone can be notified when a new deployment has been done \
