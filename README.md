@@ -20,5 +20,7 @@ Here are the K8S yaml files
 ### Github actions templates
 Here are the github actions yaml files
 
-##
+## Git flow strategy
 Using the Gitlab flow strategy https://www.flagship.io/git-branching-strategies/
+
+## Deployment agent
