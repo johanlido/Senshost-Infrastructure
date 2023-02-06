@@ -59,6 +59,12 @@ kubectl create secret docker-registry ghcr-secret \
   --docker-password=${GITHUB_TOKEN} \
   --docker-email=${GITHUB_USER_MAIL}
 
+# Setup directory structure for deployment agent
+mkdir -p /home/ec2-user/k8deploy 
+mkdir -p /home/ec2-user/k8deploy/backup
+mkdir -p /home/ec2-user/k8script
+mkdir -p /home/ec2-user/k8script/log
+
 echo 'Kubernetes base installation done, please run the following commands on worker nodes to join the nodes to the cluster:\n'
 join_command=$(kubeadm token create --print-join-command)
 echo  $join_command $' --ignore-preflight-errors='all''
