@@ -1,0 +1,8 @@
+REPO_NAME=senshost-notifier
+CONTAINER_NAME=senshost-notifier
+IMAGE_REGISTRY=954590654503.dkr.ecr.ap-south-1.amazonaws.com
+DEPLOY_FILE_NAME=deploymentSenshostNotifier.yaml
+BACKUP_DIR=backup
+IMAGE_TAG=1.0.0
+DEPLOY_FILE_FOLDER=/home/ec2-user/k8deploy
+DISCORD_WEBHOOK_URL=https://discordapp.com/api/webhooks/???????
