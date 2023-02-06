@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: senshost-notifier-deployment
+  labels:
+    app: senshost-notifier
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: senshost-notifier
+    spec:
+      nodeSelector:
+        node: single-node    
+      containers:
+      - name: senshost-notifier
+        image: 954590654503.dkr.ecr.ap-south-1.amazonaws.com/senshost-notifier:0.0.3
+        ports:
+        - containerPort: 80
+        env:
+          - name: ENVIRONMENT
+            value: Prod
+
