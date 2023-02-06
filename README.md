@@ -45,6 +45,10 @@ On the control plane node, run: crontab -e \
 Insert the following line: \
 */5 * * * * /home/ec2-user/k8script/script.sh deploytest &>> /home/ec2-user/k8script/log/logile.log
 
+### Deployment notification
+Every deployment must have a webhook in AMS Discord, so that everyone can be notified when a new deployment has been done \
+Explanation on how to set up a webhook in Discord and attach to deployment is on the todo list
+
 ### Tree structure
 - k8deploy // Here is where all deployment files should be stored 
   - deploymentXXX.yaml // Actual deployment yaml 
