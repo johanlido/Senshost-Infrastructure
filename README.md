@@ -46,15 +46,15 @@ Insert the following line: \
 */5 * * * * /home/ec2-user/k8script/script.sh deploytest &>> /home/ec2-user/k8script/log/logile.log
 
 ### Tree structure
-- k8deploy // Here is where all deployment files should be stored \
-  - backup // Backup directory when a new deployment is rolled out \
-    - deploymentXXX.yaml-Ver-T-20230202-081003.bak \
-    - deploymentXXX.yaml-Ver-T-20230202-121003.bak \
-    - deploymentXXX.yaml // Actual deployment yaml \
-  - k8script // Here is where all agent scripts should be stored \
-    - ams-senshost-api.para // parameter file for service deployment-agent \
-    - k8deployagent.sh // Actuall deployment agent \
-    - log // output log from agent scripts \
-      - logfile.log \
-      - logfile.log.bak \
+- k8deploy // Here is where all deployment files should be stored 
+  - backup // Backup directory when a new deployment is rolled out 
+    - deploymentXXX.yaml-Ver-T-20230202-081003.bak 
+    - deploymentXXX.yaml-Ver-T-20230202-121003.bak 
+    - deploymentXXX.yaml // Actual deployment yaml 
+  - k8script // Here is where all agent scripts should be stored 
+    - ams-senshost-api.para // parameter file for service deployment-agent 
+    - k8deployagent.sh // Actuall deployment agent 
+    - log // output log from agent scripts 
+      - logfile.log 
+      - logfile.log.bak 
     - recyclelog.sh // recycle agent to make sure log files doesn't fill the disk
